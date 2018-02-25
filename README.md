@@ -1,7 +1,6 @@
 <pre>
 19:26:21.209 > Client app started...
 19:26:21.659 > Request all products
-<span style="color:green;">GET http://localhost:5000/api/products</span>
 GET http://localhost:5000/api/products
 19:26:25.806 > 
 
