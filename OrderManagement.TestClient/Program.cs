@@ -22,7 +22,7 @@ namespace OrderManagement.TestClient
             Log("Request all orders", color: ConsoleColor.Green);
             Log(Environment.NewLine, WrapExeptions(() => apiClient.GetAllOrders()));
 
-            Log("Request nonexistent order", color: ConsoleColor.Green);
+            Log("Request non-existent order", color: ConsoleColor.Green);
             Log(Environment.NewLine, WrapExeptions(() => apiClient.GetOrder(Guid.Empty)));
 
             Log("Create 3 orders", color: ConsoleColor.Green);
@@ -45,10 +45,10 @@ namespace OrderManagement.TestClient
             Log("Set product #5 quantity to 17", color: ConsoleColor.Green);
             Log(Environment.NewLine, WrapExeptions(() => apiClient.SetOrderProductQuantity(apiOrder.Id, apiProducts[4].Id, 17)));
 
-            Log("Set non existant order some existant product quantity", color: ConsoleColor.Green);
+            Log("Set non-existent order some existing product quantity", color: ConsoleColor.Green);
             Log(Environment.NewLine, WrapExeptions(() => apiClient.SetOrderProductQuantity(Guid.Empty, 1, 1)));
 
-            Log("Set non existant product with id=77 quantity to 3", color: ConsoleColor.Green);
+            Log("Set non-existent product with id=77 quantity to 3", color: ConsoleColor.Green);
             Log(Environment.NewLine, WrapExeptions(() => apiClient.SetOrderProductQuantity(apiOrder.Id, 77, 3)));
 
             Log("Set product quantity to 0 (remove from order)", color: ConsoleColor.Green);
@@ -60,13 +60,11 @@ namespace OrderManagement.TestClient
             Log("Delete order", color: ConsoleColor.Green);
             Log(Environment.NewLine, WrapExeptions(() => apiClient.DeleteOrder(apiOrder.Id)));
 
-            Log("Delete nonexistant order", color: ConsoleColor.Green);
+            Log("Delete non-existent order", color: ConsoleColor.Green);
             Log(Environment.NewLine, WrapExeptions(() => apiClient.DeleteOrder(apiOrder.Id)));
-
 
             Log("Request all orders", color: ConsoleColor.Green);
             Log(Environment.NewLine, WrapExeptions(() => apiClient.GetAllOrders()));
-
 
             Console.ReadLine();
         }
