@@ -1,7 +1,7 @@
 <pre>
 19:26:21.209 > Client app started...
 19:26:21.659 > Request all products
-GET http://localhost:5000/api/products
+- ![#c5f015]GET http://localhost:5000/api/products `#c5f015`
 19:26:25.806 > 
 
 [
